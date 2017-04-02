@@ -14,7 +14,7 @@
     if (json_last_error_msg() == 'No error')
       $json = $argv[1];
     else
-      echo "Invalid JSON string provided";
+      echo "Invalid JSON string provided \n",die();
   }
   if (isset($argv[2]))
     $search = $argv[2];
