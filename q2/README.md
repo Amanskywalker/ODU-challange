@@ -26,11 +26,11 @@ ii) Write an algorithm to find maximum pebbles while going from cell-(1,1) to ce
 ### Algorithm
 
 ### Language used
-  Written in [Hack lang](http://hacklang.org/)
+  Written in Hack lang
 
 ### Running instructions
-  - Installation of hacklang can be found on [https://docs.hhvm.com/hack/getting-started/getting-started](https://docs.hhvm.com/hack/getting-started/getting-started)
+  - Installation of hacklang can be found on
 
-  - $ hhvm json.php [json string] [instance to be replaced (can be a array)] [Instance replacing (can be a array)]
+  - $ hhvm index.php
 
   - If no argument provided default test case in the question loaded
