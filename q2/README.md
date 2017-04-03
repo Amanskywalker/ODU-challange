@@ -1,4 +1,4 @@
-# Question 1
+# Question 2
 
 Consider a table composed of m x n cells, where m,n>0. Each cell of the table has a certain number of
 pebbles and a cell at i th row and j th column of the table is referred to as
@@ -23,14 +23,36 @@ ii) Write an algorithm to find maximum pebbles while going from cell-(1,1) to ce
 
 # Solution
 
+  length of any path from cell(1,1) to cell(m,n) is m+n-1
+
 ### Algorithm
 
+  Recurssive Backtracking algorithm.
+
+  Following Algorithm is used which set the variable `max` to the maximum value found using backtracking.
+
+```
+algorithm move  
+ input : integer i , j, cost
+
+  set cost = cost + pebbles[i][j]
+  if i=m & j=n           // reached the last cell
+    if cost > max
+      set max=cost
+  else if i<m & j<n      // it in some other cell
+    Move(i, j+1, cost)   // move right
+    Move(i+1,j,cost);    // move down
+  else if i=m & j<n)     // can't move down
+    Move(i, j+1 ,cost)   // move right
+  else if i<m & j=n      // can't move right
+    Move(i+1, j, cost)   // move down
+ end
+```
+
 ### Language used
-  Written in Hack lang
+  Written in [Hack lang](http://hacklang.org/)
 
 ### Running instructions
-  - Installation of hacklang can be found on
+  - Installation of hacklang can be found on [https://docs.hhvm.com/hack/getting-started/getting-started](https://docs.hhvm.com/hack/getting-started/getting-started)
 
   - $ hhvm index.php
-
-  - If no argument provided default test case in the question loaded
