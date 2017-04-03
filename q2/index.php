@@ -29,9 +29,7 @@
     if($i == $m && $j == $n)
     {
       if ($cost > $GLOBALS['max'])
-      {
         $GLOBALS['max'] = $cost;
-      }
     }
     else if ($i < $m && $j < $n) // it in some other cell
     {
@@ -39,11 +37,7 @@
       Move($i+1,$j,$cost);    // move down
     }
     else if ($i == $m && $j < $n) // can't move down
-    {
       Move($i, $j+1 ,$cost);
-    }
     else if ($i < $m && $j == $n) // can't move right
-    {
       Move($i+1, $j, $cost);
-    }
   }
